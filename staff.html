@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff | The Hoods LA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://r2.fivemanage.com/KI47PRPlZ6mWbDJxEnfwk/Watermark3.png" type="image/png">
+    
+    <!-- Discord/Open Graph Meta Tags -->
+    <meta property="og:title" content="The Hoods LA | Team">
+    <meta property="og:description" content="Meet the dedicated individuals behind the community.">
+    <meta property="og:image" content="https://r2.fivemanage.com/KI47PRPlZ6mWbDJxEnfwk/Watermark3.png">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#007eff">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo-box">
+                <a href="index.html">
+                    <img src="https://r2.fivemanage.com/KI47PRPlZ6mWbDJxEnfwk/Watermark3.png" alt="Logo">
+                </a>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-item">Home</a>
+                <a href="rules.html" class="nav-item">Rules</a>
+                <a href="about.html" class="nav-item">About</a>
+                <a href="staff.html" class="nav-item active">Staff</a>
+                <a href="links.html" class="nav-item">Links</a>
+                <a href="updates.html" class="nav-item">Updates</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://discord.gg/thehoodsla" class="btn-primary" target="_blank" rel="noopener noreferrer">Join Discord</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="sub-hero">
+            <div class="container">
+                <h1 class="reveal-text">THE <span class="dim">TEAM</span></h1>
+                <p class="sub-reveal">The dedicated individuals behind The Hoods LA.</p>
+            </div>
+        </section>
+
+        <section class="content-block">
+            <div class="container">
+                <div class="header-group">
+                    <span class="tag">Leadership</span>
+                    <h2>Ownership Team</h2>
+                    <p style="color: var(--text-muted);">Click a member to view their profile.</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="staff-card clickable" onclick="openStaffModal('zynz')">
+                        <img src="https://cdn.discordapp.com/avatars/595819667076022272/1a8af82d18668a7d82b05c92ffc437d3.webp?size=1024"
+                            alt="Zynz" class="staff-avatar">
+                        <div class="staff-info">
+                            <h3>Zynz</h3>
+                            <p>Founder</p>
+                        </div>
+                    </div>
+                    <div class="staff-card clickable" onclick="openStaffModal('neuro')">
+                        <img src="https://cdn.discordapp.com/avatars/413310208748814336/c8acada12901d8b0e2bb94129cf0e0e1.webp?size=1024"
+                            alt="Neuro" class="staff-avatar">
+                        <div class="staff-info">
+                            <h3>Neuro</h3>
+                            <p>Founder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Staff Modal -->
+        <div id="staffModal" class="modal-overlay" onclick="closeStaffModal(event)">
+            <div class="modal-content profile-card" onclick="event.stopPropagation()">
+                <button class="modal-close" onclick="closeStaffModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+                
+                <div class="profile-top">
+                    <span class="status-tag"><i class="status-dot"></i> Online</span>
+                </div>
+
+                <div class="profile-main">
+                    <div class="profile-avatar-wrapper">
+                        <img id="modalAvatar" src="" alt="Avatar" class="profile-avatar-img">
+                    </div>
+                    <h2 id="modalName">Name</h2>
+                    <p id="modalHandle" class="dim">@username</p>
+                </div>
+
+                <div class="profile-grid">
+                    <div class="stat-box">
+                        <div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                        <div class="stat-info">
+                            <label>ROLE</label>
+                            <span id="modalRole">Role</span>
+                        </div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></div>
+                        <div class="stat-info">
+                            <label>JOINED</label>
+                            <span id="modalJoined">Date</span>
+                        </div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                        <div class="stat-info">
+                            <label>SPECIALTY</label>
+                            <span id="modalSpecialty">Skill</span>
+                        </div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                        <div class="stat-info">
+                            <label>TIMEZONE</label>
+                            <span id="modalTimezone">GMT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-footer-stat">
+                    <div class="stat-icon footer-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+                    <div class="stat-info">
+                        <label>DISCORD CONTACT</label>
+                        <span id="modalDiscord">username#0000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>&copy; 2024 THE HOODS LA. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        const staffData = {
+            zynz: {
+                name: "Zynz",
+                handle: "@zynz.la",
+                uid: "001",
+                role: "Founder",
+                joined: "JAN 2024",
+                specialty: "Scripting",
+                timezone: "EST",
+                discord: "zynz",
+                avatar: "https://cdn.discordapp.com/avatars/595819667076022272/1a8af82d18668a7d82b05c92ffc437d3.webp?size=1024"
+            },
+            neuro: {
+                name: "Neuro",
+                handle: "@neuro.la",
+                uid: "002",
+                role: "Founder",
+                joined: "JAN 2024",
+                specialty: "Operations",
+                timezone: "PST",
+                discord: "neuro",
+                avatar: "https://cdn.discordapp.com/avatars/413310208748814336/c8acada12901d8b0e2bb94129cf0e0e1.webp?size=1024"
+            }
+        };
+
+        function openStaffModal(id) {
+            const member = staffData[id];
+            document.getElementById('modalName').innerText = member.name;
+            document.getElementById('modalHandle').innerText = member.handle;
+            document.getElementById('modalRole').innerText = member.role;
+            document.getElementById('modalJoined').innerText = member.joined;
+            document.getElementById('modalSpecialty').innerText = member.specialty;
+            document.getElementById('modalTimezone').innerText = member.timezone;
+            document.getElementById('modalDiscord').innerText = member.discord;
+            document.getElementById('modalAvatar').src = member.avatar;
+            
+            document.getElementById('staffModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeStaffModal(e) {
+            document.getElementById('staffModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+
+</html>
